@@ -1,0 +1,43 @@
+------------------------------------------------------------------------------------------------------------------------------
+
+Functions
+
+void arcade(short*)-
+Takes pointer to array of joystick values (must have all 4 joystick axes in order, 0 = right x-axis, 1 = right y-axis)
+Calculates and assigns motor powers for left and right drive with split arcade control scheme (left y-axis, right x-axis)
+Assumes drive is inverted correctly
+
+void arcade(short, short)-
+Takes two arguments of type short, values of y-axis (argument 1) and x-axis (argument 2) to be used in arcade control
+Calculates and assigns motor powers for left and right drive with any arcade scheme
+Assumes drive is inverted correctly
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Macros
+
+setDriveL(power)-
+Takes any argument (macro, so undefined argument type), but may cause an error if argument is not a valid type to store in motor[] array
+Assigns argument value to both left drive motors
+
+setDriveR(power)-
+Takes any argument (macro, so undefined argument type), but may cause an error if argument is not a valid type to store in motor[] array
+Assigns argument value to both right drive motors
+
+setChain(power)-
+Takes any argument (macro, so undefined argument type), but may cause an error if argument is not a valid type to store in motor[] array
+Assigns argument value to both chain bar motors
+
+setLift(power)-
+Takes any argument (macro, so undefined argument type), but may cause an error if argument is not a valid type to store in motor[] array
+Assigns argument value to both 4-bar motors
+
+setGoal(power)-
+Takes any argument (macro, so undefined argument type), but may cause an error if argument is not a valid type to store in motor[] array
+Assigns argument value to both mobile goal lift motors
+
+setClaw(power)-
+Takes any argument (macro, so undefined argument type), but may cause an error if argument is not a valid type to store in motor[] array
+Assigns argument value to claw motor
+
+------------------------------------------------------------------------------------------------------------------------------
