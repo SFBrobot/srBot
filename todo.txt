@@ -9,7 +9,8 @@ October 7
 5. Mount c-channels for mobile goal rubber band assists
 6. Mount c-channels for 4-bar lift stop to protect wheels
 7. Trim zipties
-8. Download code to robot & test it
-9. Practice driving
+8. Check & correct sizing
+9. Download code to robot & test it
+10. Practice driving
 
 --------------------------------------------------------------------------------------------------------------
