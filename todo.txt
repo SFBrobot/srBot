@@ -9,7 +9,7 @@ October 7
   5. Mount c-channels for mobile goal rubber band assists (Done)
 6. Mount c-channels for 4-bar lift stop to protect wheels
   7. Mount last battery clip (Done)
-8. Mount battery wire extensions
+  8. Mount battery wire extensions (Done)
   9. Trim zipties (Done)
 10. Check & correct sizing
 11. Download code to robot & test it
