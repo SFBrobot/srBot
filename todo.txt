@@ -2,15 +2,15 @@
 
 October 7
 
-1. Replace 4" omni wheels with 3.25" traction wheels, 3.25" traction wheels become 3.25" omni wheels (Done)
-2. Tighten claw motor (Done)
-3. Correct claw alignment (Done)
-4. Adjust ground clearance to account for smaller wheels (Done)
-5. Mount c-channels for mobile goal rubber band assists (Done)
+  1. Replace 4" omni wheels with 3.25" traction wheels, 3.25" traction wheels become 3.25" omni wheels (Done)
+  2. Tighten claw motor (Done)
+  3. Correct claw alignment (Done)
+  4. Adjust ground clearance to account for smaller wheels (Done)
+  5. Mount c-channels for mobile goal rubber band assists (Done)
 6. Mount c-channels for 4-bar lift stop to protect wheels
-7. Mount last battery clip (Done)
+  7. Mount last battery clip (Done)
 8. Mount battery wire extensions
-9. Trim zipties (Done)
+  9. Trim zipties (Done)
 10. Check & correct sizing
 11. Download code to robot & test it
 12. Practice driving
