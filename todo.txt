@@ -17,3 +17,12 @@ October 7
 13. Practice driving
 
 --------------------------------------------------------------------------------------------------------------
+
+October 9-13
+
+1. Implement PID control on 4-bar and chain-bar lifts to keep them in place
+2. Measure, Cut & Install Polycarbonate Cortex Shield
+3. Driver Practice
+4. Autonomous Routine Design and Programming
+
+--------------------------------------------------------------------------------------------------------------
