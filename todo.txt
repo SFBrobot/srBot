@@ -2,10 +2,10 @@
 
 October 7
 
-1. Replace 4" omni wheels with 3.25" traction wheels, 3.25" traction wheels become 3.25" omni wheels
-2. Tighten claw motor
-3. Correct claw alignment
-4. Adjust ground clearance to account for smaller wheels
+1. Replace 4" omni wheels with 3.25" traction wheels, 3.25" traction wheels become 3.25" omni wheels (Done)
+2. Tighten claw motor (Done)
+3. Correct claw alignment (Done)
+4. Adjust ground clearance to account for smaller wheels (Done)
 5. Mount c-channels for mobile goal rubber band assists
 6. Mount c-channels for 4-bar lift stop to protect wheels
 7. Trim zipties
