@@ -134,7 +134,7 @@ void arcade(short x, short y) { //Takes 2 short arguments
 //Threshold for analog joysticks to prevent motor whine
 //Range of dangerous lift values
 //Maximum change in drive power
-const int STICK_THRESH = 7,
+const short STICK_THRESH = 7,
 	CLAW_OPEN_POT = 160,
 	DRIVE_MAX_SLEW = 31,
 	CLAW_PWR_HOLD = 15;
@@ -154,8 +154,7 @@ Pid rDrivePid,
 Pid* pids[4] = { &rDrivePid, &lDrivePid, &liftPid, &chainPid };
 
 //Global variable declarations
-int liftPotVal = 0,
-	lDrivePwr,
+short lDrivePwr,
 	lDrivePwrLast = 0,
 	rDrivePwr,
 	rDrivePwrLast = 0,
@@ -166,7 +165,7 @@ int liftPotVal = 0,
 
 signed char btns[6] = { 0, 0, 0, 0, 0, 0 },
 	btnLast[6] = { 0, 0, 0, 0, 0, 0 };
-	
+
 bool liftPrecision = false,
 	driveFlip = false;
 
@@ -180,7 +179,7 @@ task main()
 
 	for(char i = 0; i < (sizeof(pids) / sizeof(Pid)); i++)
 		initPid(pids[i], &pidConsts[i][0]);
-	
+
 	while(true) {
 		//Compare joystick values against an arbitrary threshold to prevent motor whine and assign to sticks array
 		for(byte i = 0; i < 4; i++) //Iterate over all 4 joystick axes
@@ -211,11 +210,11 @@ task main()
 				? 1
 				: -1
 			: 0;
-			
+
 		btns[4] = (vexRT[Btn7D])
 			? 1
 			: 0;
-		
+
 		btns[5] = (vexRT[Btn7L])
 			? 1
 			: 0;
@@ -223,11 +222,11 @@ task main()
 		driveFlip = (btns[5] && !btnLast[5])
 			? !driveFlip
 			: driveFlip;
-			
+
 		liftPrecision = (btns[4] && !btnLast[4])
 			? !liftPrecision
 			: liftPrecision;
-			
+
 		lDrivePwr = arcadeL(sticks);
 		rDrivePwr = arcadeR(sticks);
 
@@ -248,19 +247,19 @@ task main()
 				? 127
 				: -127
 			: upPid(pids[2], SensorValue[liftPot])); //Update 4-bar PID
-			
+
 		clawPwr = (btns[3]) //Button Pair 8L/R
 			? (btns[3] > 0)
 				? 127
 				: -127
 			: (CLAW_PWR_HOLD * sgn(SensorValue[clawPot] - CLAW_OPEN_POT));
-			
+
 		goalPwr = (btns[2]) //Button Pair 8U/D
 			? (btns[2] > 0)
 				? 127
 				: -127
 			: 0;
-			
+
 		lDrivePwr = ((fabs(lDrivePwr - lDrivePwrLast) > DRIVE_MAX_SLEW)
 			? lDrivePwrLast + (DRIVE_MAX_SLEW * sgn(lDrivePwr - lDrivePwrLast))
 			: lDrivePwr);
@@ -268,13 +267,13 @@ task main()
 		rDrivePwr = ((fabs(rDrivePwr - rDrivePwrLast) > DRIVE_MAX_SLEW)
 			? rDrivePwrLast + (DRIVE_MAX_SLEW * sgn(rDrivePwr - rDrivePwrLast))
 			: rDrivePwr);
-			
+
 		if(driveFlip) {
 			swap = lDrivePwr;
 			lDrivePwr = -rDrivePwr;
 			rDrivePwr = -swap;
 		}
-			
+
 		if(liftPrecision)
 			liftPwr = round(((liftPwr + 1) / liftFac) - 1);
 
@@ -282,7 +281,7 @@ task main()
 		rDrivePwrLast = rDrivePwr;
 		for(char i = 0; i < sizeof(btns) / sizeof(char); i++)
 			btnLast[i] = btns[i];
-	
+
 		setDriveL(lDrivePwr);
 		setDriveR(rDrivePwr);
 		setClaw(clawPwr);
